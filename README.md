@@ -1,57 +1,139 @@
-# 🚀 Getting started with Strapi
+# Strapi + GraphQL
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+- [Strapi](https://github.com/strapi/strapi)
+- [Apollo Elements](https://apolloelements.dev/)
+- [Lit](https://lit.dev/)
+- [GraphQL-Code-Gen](https://www.graphql-code-generator.com/)
 
-### `develop`
+## Quick Start
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+```bash
+pnpm i
 
-```
-npm run develop
-# or
-yarn develop
-```
+# start strapi server
+pnpm develop
 
-### `start`
+# start client by Apollo Elements
+cd client
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
+pnpm i
 
-```
-npm run start
-# or
-yarn start
-```
-
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
-
-```
-npm run build
-# or
-yarn build
+pnpm start
 ```
 
-## ⚙️ Deployment
+**Unlike the official module, the CodeGen configuration here is directly connected to the GraphQL Playground launched by Strapi, refer to the following code configuration:**
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+```yml
+schema: http://localhost:1337/graphql
 
-## 📚 Learn more
+extensions:
+  codegen:
+    config:
+      # as original config
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
+    generates:
+      src/introspection.json:
+        plugins:
+          - introspection
+      src/schema.ts:
+        plugins:
+          - typescript
+      src/:
+        preset: near-operation-file
+        presetConfig:
+          baseTypesPath: schema.ts
+          extension: .graphql.ts
+        plugins:
+          - typescript-operations
+          - typed-document-node
+        documents:
+          - src/**/*.fragment.graphql
+          - src/**/*.mutation.graphql
+          - src/**/*.query.graphql
+          - src/**/*.subscription.graphql
+```
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+When starting the application, CodeGen generate [schema.ts](client/src/schema.ts) from your GraphQL Server, which is also relied upon for other generation works.
 
-## ✨ Community
+Write your expect GraphQL operation schema([App.query.graphql](client/src/components/app/App.query.graphql)) like:
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+```graphql
+query BlogQuery {
+  queryBlogList: blogs {
+    data {
+      id
+      attributes {
+        Title
+        Body
+        Date
+      }
+    }
+  }
+}
+```
 
----
+Waiting for the watching CodeGen process to restart and generate **App.query.graphql.ts** like:
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+```typescript
+import * as Types from "../../schema";
+
+import { TypedDocumentNode as DocumentNode } from "@graphql-typed-document-node/core";
+export type BlogQueryVariables = Types.Exact<{ [key: string]: never }>;
+
+export type BlogQueryData = {
+  readonly __typename?: "Query";
+  readonly queryBlogList?:
+    | {
+        readonly __typename?: "BlogEntityResponseCollection";
+        readonly data: ReadonlyArray<{
+          readonly __typename?: "BlogEntity";
+          readonly id?: string | null | undefined;
+          readonly attributes?:
+            | {
+                readonly __typename?: "Blog";
+                readonly Title?: string | null | undefined;
+                readonly Body?: string | null | undefined;
+                readonly Date?: any | null | undefined;
+              }
+            | null
+            | undefined;
+        }>;
+      }
+    | null
+    | undefined;
+};
+
+export const BlogQuery = {
+  kind: "Document",
+  definitions: [
+    // ...definitions
+  ],
+} as unknown as DocumentNode<BlogQueryData, BlogQueryVariables>;
+```
+
+Use named import to import the generated DocumentNode in your applications:
+
+```typescript
+import { BlogQuery } from "./App.query.graphql";
+
+@customElement("apollo-app")
+export class ApolloApp extends LitElement {
+  static readonly is = "apollo-app";
+
+  static readonly styles = [shared, style];
+
+  blogQuery = new ApolloQueryController(this, BlogQuery);
+
+  render(): TemplateResult {
+    console.log(this.blogQuery);
+
+    return html`
+      <dl>
+        <dt>
+          Blog Count: ${this.blogQuery.data?.queryBlogList.data.length ?? 0}
+        </dt>
+      </dl>
+    `;
+  }
+}
+```
