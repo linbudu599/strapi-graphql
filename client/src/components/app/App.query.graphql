@@ -1,3 +1,18 @@
 query AppQuery {
-  location @client { pathname }
+  location @client {
+    pathname
+  }
+}
+
+query BlogQuery {
+  queryBlogList: blogs {
+    data {
+      id
+      attributes {
+        Title
+        Body
+        Date
+      }
+    }
+  }
 }

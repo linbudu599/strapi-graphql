@@ -10,6 +10,22 @@ type Location {
   protocol: String
 }
 
+type BlogData {
+  data: BlogMetaData
+}
+
+type BlogMetaData {
+  id: ID
+  attributes: [Blog]
+}
+
+type Blog {
+  Title: String
+  Body: String
+  Date: String
+}
+
 type Query {
   location: Location
+  blogs: BlogData
 }
