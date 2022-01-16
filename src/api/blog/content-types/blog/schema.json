@@ -28,7 +28,8 @@
         "Source",
         "Explore",
         "Sample"
-      ]
+      ],
+      "default": "Note"
     }
   }
 }
