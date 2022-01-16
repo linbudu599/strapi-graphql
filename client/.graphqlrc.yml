@@ -1,25 +1,32 @@
-schema: schema.graphql
+# schema: schema.graphql
+schema: http://localhost:1337/graphql
 
 extensions:
   codegen:
     config:
-      constEnums: true            # use `const enum` to define unions
-      declarationKind: interface  # use `interface` keyword to define types
+      constEnums: true # use `const enum` to define unions
+      declarationKind: interface # use `interface` keyword to define types
       dedupeOperationSuffix: true # prevent `MyQueryQuery`
-      documentVariableSuffix: ''  # export `MyQuery` instead of `MyQueryDocument`
-      immutableTypes: true        # add `readonly` keyword to frozen objects
-      namingConvention: keep      # don't rename types
+      documentVariableSuffix: "" # export `MyQuery` instead of `MyQueryDocument`
+      immutableTypes: true # add `readonly` keyword to frozen objects
+      namingConvention: keep # don't rename types
       operationResultSuffix: Data # add `Data` suffix to result types
-      optionalResolveType: true   # make `__resolveType` field optional
-      useIndexSignature: true     # required for compatibility with apollo server
+      optionalResolveType: true # make `__resolveType` field optional
+      useIndexSignature: true # required for compatibility with apollo server
 
     generates:
-      src/schema.ts:
-        schema: src/client.schema.graphql
+      # src/schema.ts:
+      #   schema: src/client.schema.graphql
+      #   plugins:
+      #     - typescript-operations
+      src/introspection.json:
         plugins:
-          - typescript-operations
+          - introspection
+      src/schema.ts:
+        plugins:
+          - typescript
       src/:
-        schema: src/client.schema.graphql
+        # schema: src/client.schema.graphql
         preset: near-operation-file
         presetConfig:
           baseTypesPath: schema.ts

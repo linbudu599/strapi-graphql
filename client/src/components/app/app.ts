@@ -2,7 +2,7 @@ import { LitElement, html, TemplateResult } from "lit";
 import { ApolloQueryController } from "@apollo-elements/core";
 import { customElement } from "lit/decorators.js";
 
-import { AppQuery, BlogQuery } from "./App.query.graphql";
+import { BlogQuery } from "./App.query.graphql";
 
 import style from "./app.css";
 import shared from "../shared.css";
@@ -13,7 +13,6 @@ export class ApolloApp extends LitElement {
 
   static readonly styles = [shared, style];
 
-  query = new ApolloQueryController(this, AppQuery);
   blogQuery = new ApolloQueryController(this, BlogQuery);
 
   render(): TemplateResult {
