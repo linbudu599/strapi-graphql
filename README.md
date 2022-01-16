@@ -8,7 +8,8 @@
 ## Quick Start
 
 ```bash
-pnpm i
+# use option --shamefully-hoist to ensure deps under @babel scope can be found
+pnpm i --shamefully-hoist
 
 # start strapi server
 pnpm develop
