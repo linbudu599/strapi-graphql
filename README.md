@@ -1,5 +1,7 @@
 # Strapi + GraphQL
 
+> A sample project of strapi with GraphQL + Web Components.
+
 - [Strapi](https://github.com/strapi/strapi)
 - [Apollo Elements](https://apolloelements.dev/)
 - [Lit](https://lit.dev/)
@@ -14,7 +16,7 @@ pnpm i --shamefully-hoist
 # start strapi server
 pnpm develop
 
-# start client by Apollo Elements
+# start client application
 cd client
 
 pnpm i
@@ -22,7 +24,7 @@ pnpm i
 pnpm start
 ```
 
-**Unlike the official module, the CodeGen configuration here is directly connected to the GraphQL Playground launched by Strapi, refer to the following code configuration:**
+**The CodeGen configuration here is directly connected to the GraphQL Playground launched by Strapi, refer to the following configurations:**
 
 ```yml
 schema: http://localhost:1337/graphql
@@ -54,9 +56,9 @@ extensions:
           - src/**/*.subscription.graphql
 ```
 
-When starting the application, CodeGen generate [schema.ts](client/src/schema.ts) from your GraphQL Server, which is also relied upon for other generation works.
+When starting the application, CodeGen generate [schema.ts](client/src/schema.ts) from your GraphQL Server(by Strapi), which is also relied upon for generating operation definition file(.ts) from GraphQL operation(.graphql).
 
-Write your expect GraphQL operation schema([App.query.graphql](client/src/components/app/App.query.graphql)) like:
+Write GraphQL operation schema([App.query.graphql](client/src/components/app/App.query.graphql)) like below:
 
 ```graphql
 query BlogQuery {
@@ -73,7 +75,7 @@ query BlogQuery {
 }
 ```
 
-Waiting for the watching CodeGen process to restart and generate **App.query.graphql.ts** like:
+Waiting for the watching CodeGen process to restart and generate **App.query.graphql.ts**:
 
 ```typescript
 import * as Types from "../../schema";
@@ -84,22 +86,7 @@ export type BlogQueryVariables = Types.Exact<{ [key: string]: never }>;
 export type BlogQueryData = {
   readonly __typename?: "Query";
   readonly queryBlogList?:
-    | {
-        readonly __typename?: "BlogEntityResponseCollection";
-        readonly data: ReadonlyArray<{
-          readonly __typename?: "BlogEntity";
-          readonly id?: string | null | undefined;
-          readonly attributes?:
-            | {
-                readonly __typename?: "Blog";
-                readonly Title?: string | null | undefined;
-                readonly Body?: string | null | undefined;
-                readonly Date?: any | null | undefined;
-              }
-            | null
-            | undefined;
-        }>;
-      }
+    | // ...types
     | null
     | undefined;
 };
@@ -112,7 +99,7 @@ export const BlogQuery = {
 } as unknown as DocumentNode<BlogQueryData, BlogQueryVariables>;
 ```
 
-Use named import to import the generated DocumentNode in your applications:
+Use named import to import the generated **DocumentNode** in your application(some extraneous code has been omitted):
 
 ```typescript
 import { BlogQuery } from "./App.query.graphql";
