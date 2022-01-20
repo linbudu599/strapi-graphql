@@ -146,6 +146,11 @@ export const enum ENUM_BLOG_POSTTYPE {
   Source = 'Source'
 };
 
+export interface ExtraType {
+  readonly __typename?: 'ExtraType';
+  readonly name?: Maybe<Scalars['String']>;
+}
+
 export interface FileInfoInput {
   readonly alternativeText?: InputMaybe<Scalars['String']>;
   readonly caption?: InputMaybe<Scalars['String']>;
@@ -460,6 +465,7 @@ export interface Query {
   readonly __typename?: 'Query';
   readonly blog?: Maybe<BlogEntityResponse>;
   readonly blogs?: Maybe<BlogEntityResponseCollection>;
+  readonly extra?: Maybe<ExtraType>;
   readonly i18NLocale?: Maybe<I18NLocaleEntityResponse>;
   readonly i18NLocales?: Maybe<I18NLocaleEntityResponseCollection>;
   readonly me?: Maybe<UsersPermissionsMe>;
