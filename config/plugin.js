@@ -1,5 +1,4 @@
 module.exports = {
-  //
   graphql: {
     config: {
       endpoint: "/graphql",

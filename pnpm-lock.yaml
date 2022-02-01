@@ -1,17 +1,17 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@strapi/plugin-graphql': ^4.0.4
-  '@strapi/plugin-i18n': ^4.0.4
-  '@strapi/plugin-users-permissions': ^4.0.4
-  '@strapi/strapi': ^4.0.4
+  '@strapi/plugin-graphql': ^4.0.6
+  '@strapi/plugin-i18n': ^4.0.6
+  '@strapi/plugin-users-permissions': ^4.0.6
+  '@strapi/strapi': ^4.0.6
   sqlite3: 5.0.2
 
 dependencies:
-  '@strapi/plugin-graphql': 4.0.4
-  '@strapi/plugin-i18n': 4.0.4
-  '@strapi/plugin-users-permissions': 4.0.4
-  '@strapi/strapi': 4.0.4_sqlite3@5.0.2
+  '@strapi/plugin-graphql': 4.0.6_@strapi+strapi@4.0.6
+  '@strapi/plugin-i18n': 4.0.6
+  '@strapi/plugin-users-permissions': 4.0.6
+  '@strapi/strapi': 4.0.6_sqlite3@5.0.2
   sqlite3: 5.0.2
 
 packages:
@@ -26,6 +26,8 @@ packages:
       apollo-server-types: 3.5.0_graphql@15.5.1
       graphql: 15.5.1
       lodash.xorby: 4.7.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /@apollo/protobufjs/1.2.2:
@@ -1297,11 +1299,10 @@ packages:
       to-fast-properties: 2.0.0
     dev: false
 
-  /@casl/ability/4.1.6:
-    resolution: {integrity: sha512-ZI30fRacHKCCrWJn1pmxx/+IKUkoycVNz+Mge9EeIH+esDT7nydgWbitVPnlBAbxQXz5eybPAvfPSg3WOa2izw==}
-    engines: {npm: ^6.0.0}
+  /@casl/ability/5.4.3:
+    resolution: {integrity: sha512-X6U79udKkfS7459Y3DCkw58ZQno7BD9VJa5GnTL1rcKRACqERMVDs7qjVMW+JlLUZcT5DB2/GF5uvu0KsudEcA==}
     dependencies:
-      sift: 13.5.2
+      '@ucast/mongo2js': 1.3.3
     dev: false
 
   /@dabh/diagnostics/2.0.2:
@@ -1823,8 +1824,8 @@ packages:
       lodash.deburr: 4.1.0
     dev: false
 
-  /@strapi/admin/4.0.4_debug@4.3.2:
-    resolution: {integrity: sha512-Zj9aAeHm9dFqBmvU7EeuSokrxdzyK0e6KTbhbzfKQRDMT6yAXUDr3tfqs8w2hpk7PbQJSQlf1OXE4YxX0iJfWw==}
+  /@strapi/admin/4.0.6_debug@4.3.2:
+    resolution: {integrity: sha512-CyU8Ig5L7unl3ZKmJSw4JaiB0ie2ZAQqPQMY3jJGhMAKQ6EVmHkRChsUABGCKQFc/cUFd7twLASf+Nz3rq/LBA==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@babel/core': 7.16.7
@@ -1836,18 +1837,18 @@ packages:
       '@babel/preset-env': 7.16.7_@babel+core@7.16.7
       '@babel/preset-react': 7.16.7_@babel+core@7.16.7
       '@babel/runtime': 7.16.7
-      '@casl/ability': 4.1.6
+      '@casl/ability': 5.4.3
       '@fingerprintjs/fingerprintjs': 3.1.1
       '@fortawesome/fontawesome-free': 5.15.4
       '@fortawesome/fontawesome-svg-core': 1.2.36
       '@fortawesome/free-brands-svg-icons': 5.15.4
       '@fortawesome/free-solid-svg-icons': 5.15.4
       '@fortawesome/react-fontawesome': 0.1.16_f515edce028694561ceb456e3dba224c
-      '@strapi/babel-plugin-switch-ee-ce': 4.0.4
-      '@strapi/design-system': 0.0.1-alpha.71_a942519613232efd17597589db270948
-      '@strapi/helper-plugin': 4.0.4_93f28baea1fbad2c6389ce870bc07c27
-      '@strapi/icons': 0.0.1-alpha.71_react-dom@17.0.2+react@17.0.2
-      '@strapi/utils': 4.0.4
+      '@strapi/babel-plugin-switch-ee-ce': 4.0.6
+      '@strapi/design-system': 0.0.1-alpha.72_279be387057907d86cd604660eed5dcc
+      '@strapi/helper-plugin': 4.0.6_93f28baea1fbad2c6389ce870bc07c27
+      '@strapi/icons': 0.0.1-alpha.72_react-dom@17.0.2+react@17.0.2
+      '@strapi/utils': 4.0.6
       axios: 0.24.0_debug@4.3.2
       babel-loader: 8.2.3_c391fd7145c194be609b87ed083bbc6a
       babel-plugin-styled-components: 2.0.2_styled-components@5.3.3
@@ -1946,12 +1947,12 @@ packages:
       - webpack-bundle-analyzer
     dev: false
 
-  /@strapi/babel-plugin-switch-ee-ce/4.0.4:
-    resolution: {integrity: sha512-ZgLNGKD+xLV9v5ePzNUx8zi9vPfgjI4N2ssjZLAzoakr5B4MrgaDfod10m/ILfuYFNu2sooPqmTnD5j0cdtNFA==}
+  /@strapi/babel-plugin-switch-ee-ce/4.0.6:
+    resolution: {integrity: sha512-uuZFaJcNMtslDMwNcIO4ovZDT9Ah/RQtQ3862EcvRoAABbL2eWPqecOS5/IALur3YRXsn6coJ8CzubK5xLV2lw==}
     dev: false
 
-  /@strapi/database/4.0.4_sqlite3@5.0.2:
-    resolution: {integrity: sha512-MCFcSEyX31ZpSfa7j1OGOx2djfkidYKPc8vzOl5yipMeOXH8Pqule3aa1Dig+SxGmpi7M+oSn1NQbrtDWUNQDg==}
+  /@strapi/database/4.0.6_sqlite3@5.0.2:
+    resolution: {integrity: sha512-FiwnQ1OyR/M3VRi2JluUNS+/FaUvEPXhU7DrPiRlCuIUikHT54AC8VrhB1g0MpgBXkvZNRuN+LFHSPZkaLNccQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       date-fns: 2.22.1
@@ -1969,8 +1970,8 @@ packages:
       - tedious
     dev: false
 
-  /@strapi/design-system/0.0.1-alpha.71_a942519613232efd17597589db270948:
-    resolution: {integrity: sha512-79vGJFtbksKI4SbWNVZtRal1UpQJWNgq8+lvEcsv//PVHYE0GkywAuKEB9Xpz6VJPo1Ty3vLvJFUlrcfBqMkow==}
+  /@strapi/design-system/0.0.1-alpha.72_279be387057907d86cd604660eed5dcc:
+    resolution: {integrity: sha512-U8UxjOOm/PWdID0HJXKUVORAn4z1W56ZNuOrJO8ecwZ9T8xHLNDR9+c/O3DBNq591GtLQYAwTNE4aAZDKisjZg==}
     peerDependencies:
       '@strapi/icons': ^0.0.1-alpha.4
       react: ^17.0.1
@@ -1979,7 +1980,7 @@ packages:
       styled-components: ^5.2.1
     dependencies:
       '@internationalized/number': 3.0.3
-      '@strapi/icons': 0.0.1-alpha.71_react-dom@17.0.2+react@17.0.2
+      '@strapi/icons': 0.0.1-alpha.72_react-dom@17.0.2+react@17.0.2
       compute-scroll-into-view: 1.0.17
       prop-types: 15.8.1
       react: 17.0.2
@@ -1988,8 +1989,8 @@ packages:
       styled-components: 5.3.3_react-dom@17.0.2+react@17.0.2
     dev: false
 
-  /@strapi/generate-new/4.0.4:
-    resolution: {integrity: sha512-Gn0wbmto57tah9uwi7Y/mg2w0kiyFFOzT0lnbzaBZ/n6M+vCMzbrfyclbasCOOB+Y9tSkMCM8q+5fVSacsqGDQ==}
+  /@strapi/generate-new/4.0.6:
+    resolution: {integrity: sha512-7+gwIBzacbHXm/XB9EkA249ADKMyq86UcrpAeIO2qOB+gvcbUku2zP5O8IUT+5qxsMKJoJs1WkQYUB0FWvZJcg==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@sentry/node': 6.3.0
@@ -1998,21 +1999,22 @@ packages:
       fs-extra: 9.1.0
       inquirer: 8.2.0
       lodash: 4.17.21
-      node-fetch: 2.6.5
+      node-fetch: 2.6.7
       node-machine-id: 1.1.12
       ora: 5.4.1
       tar: 6.1.11
       uuid: 3.4.0
     transitivePeerDependencies:
+      - encoding
       - supports-color
     dev: false
 
-  /@strapi/generators/4.0.4:
-    resolution: {integrity: sha512-HcMm/+e9OKPOS4FeauPLGQ3F7eUxuyV7HHyy1BHyy1D/7/nzR2nqMG41KBi9zF3dFIfn+O6DnsLkgEVGdFLPjg==}
+  /@strapi/generators/4.0.6:
+    resolution: {integrity: sha512-KsbDfdrR4vmTMj4CPeABnkMzY16Ge9IonXL99speyP5kzx/DfSW4CuB4EWTyAkwtz9rNgSSaxAdzGQjD0S5cOg==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@sindresorhus/slugify': 1.1.0
-      '@strapi/utils': 4.0.4
+      '@strapi/utils': 4.0.6
       chalk: 4.1.2
       fs-extra: 10.0.0
       node-plop: 0.26.3
@@ -2020,8 +2022,8 @@ packages:
       pluralize: 8.0.0
     dev: false
 
-  /@strapi/helper-plugin/4.0.4:
-    resolution: {integrity: sha512-hGcl6sisgAzDJvlM+flomnzf5wI7OW1vMZOTBxgCYGzF8a+TV3FN3aScFdPkqGP0DJzTc6rSot6RmRaRHmCaJQ==}
+  /@strapi/helper-plugin/4.0.6:
+    resolution: {integrity: sha512-qg53A4DWCYJkpfI6XSte1Yh8rlQLsWuUc3BOrepME52sd/Dvrx2KKP7FfHXhY/9wecifln3+hRyrZrqgXT24EQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     peerDependencies:
       immer: 9.0.6
@@ -2033,7 +2035,7 @@ packages:
       '@fortawesome/free-brands-svg-icons': 5.15.4
       '@fortawesome/free-solid-svg-icons': 5.15.4
       '@fortawesome/react-fontawesome': 0.1.16_f515edce028694561ceb456e3dba224c
-      axios: 0.24.0
+      axios: 0.25.0
       babel-plugin-styled-components: 2.0.2_styled-components@5.3.3
       formik: 2.2.9_react@17.0.2
       invariant: 2.2.4
@@ -2056,8 +2058,8 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/helper-plugin/4.0.4_4544f61555da5a5ce9e97ec9880f6d53:
-    resolution: {integrity: sha512-hGcl6sisgAzDJvlM+flomnzf5wI7OW1vMZOTBxgCYGzF8a+TV3FN3aScFdPkqGP0DJzTc6rSot6RmRaRHmCaJQ==}
+  /@strapi/helper-plugin/4.0.6_4544f61555da5a5ce9e97ec9880f6d53:
+    resolution: {integrity: sha512-qg53A4DWCYJkpfI6XSte1Yh8rlQLsWuUc3BOrepME52sd/Dvrx2KKP7FfHXhY/9wecifln3+hRyrZrqgXT24EQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     peerDependencies:
       immer: 9.0.6
@@ -2069,7 +2071,7 @@ packages:
       '@fortawesome/free-brands-svg-icons': 5.15.4
       '@fortawesome/free-solid-svg-icons': 5.15.4
       '@fortawesome/react-fontawesome': 0.1.16_f515edce028694561ceb456e3dba224c
-      axios: 0.24.0_debug@4.3.2
+      axios: 0.25.0_debug@4.3.2
       babel-plugin-styled-components: 2.0.2_styled-components@5.3.3
       formik: 2.2.9_react@17.0.2
       immer: 9.0.6
@@ -2094,8 +2096,8 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/helper-plugin/4.0.4_93f28baea1fbad2c6389ce870bc07c27:
-    resolution: {integrity: sha512-hGcl6sisgAzDJvlM+flomnzf5wI7OW1vMZOTBxgCYGzF8a+TV3FN3aScFdPkqGP0DJzTc6rSot6RmRaRHmCaJQ==}
+  /@strapi/helper-plugin/4.0.6_93f28baea1fbad2c6389ce870bc07c27:
+    resolution: {integrity: sha512-qg53A4DWCYJkpfI6XSte1Yh8rlQLsWuUc3BOrepME52sd/Dvrx2KKP7FfHXhY/9wecifln3+hRyrZrqgXT24EQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     peerDependencies:
       immer: 9.0.6
@@ -2107,7 +2109,7 @@ packages:
       '@fortawesome/free-brands-svg-icons': 5.15.4
       '@fortawesome/free-solid-svg-icons': 5.15.4
       '@fortawesome/react-fontawesome': 0.1.16_f515edce028694561ceb456e3dba224c
-      axios: 0.24.0_debug@4.3.2
+      axios: 0.25.0_debug@4.3.2
       babel-plugin-styled-components: 2.0.2_styled-components@5.3.3
       formik: 2.2.9_react@17.0.2
       immer: 9.0.6
@@ -2133,8 +2135,8 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/helper-plugin/4.0.4_debug@4.3.2+qs@6.10.1:
-    resolution: {integrity: sha512-hGcl6sisgAzDJvlM+flomnzf5wI7OW1vMZOTBxgCYGzF8a+TV3FN3aScFdPkqGP0DJzTc6rSot6RmRaRHmCaJQ==}
+  /@strapi/helper-plugin/4.0.6_debug@4.3.2+qs@6.10.1:
+    resolution: {integrity: sha512-qg53A4DWCYJkpfI6XSte1Yh8rlQLsWuUc3BOrepME52sd/Dvrx2KKP7FfHXhY/9wecifln3+hRyrZrqgXT24EQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     peerDependencies:
       immer: 9.0.6
@@ -2146,7 +2148,7 @@ packages:
       '@fortawesome/free-brands-svg-icons': 5.15.4
       '@fortawesome/free-solid-svg-icons': 5.15.4
       '@fortawesome/react-fontawesome': 0.1.16_f515edce028694561ceb456e3dba224c
-      axios: 0.24.0_debug@4.3.2
+      axios: 0.25.0_debug@4.3.2
       babel-plugin-styled-components: 2.0.2_styled-components@5.3.3
       formik: 2.2.9_react@17.0.2
       invariant: 2.2.4
@@ -2170,8 +2172,8 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/icons/0.0.1-alpha.71_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-fOjcT/shqKZndKwiDI7Y06NXUNzLBAieL/pICrLxKqdYzwo7TguM3rwDxJ7igOtqh/tWDhjqve6FjAqob2yWgA==}
+  /@strapi/icons/0.0.1-alpha.72_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-ZFzJxPI0bYLwjBQNokZOLyHU5385xV1V5l8zetx5DXLyaCwPEf+wQ/uYWqmwptrr0KBHOID6zF8eizU5nS4LTA==}
     peerDependencies:
       react: ^17.0.1
       react-dom: ^17.0.1
@@ -2180,31 +2182,31 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
-  /@strapi/logger/4.0.4:
-    resolution: {integrity: sha512-OzlFXyOwqozTcP+4/5qyxiOcRjQ748B3nuQkxgsrOQo+ygybGedaCunXLgwevjfkSho0N4wFXeGkr30Oag1Fvw==}
+  /@strapi/logger/4.0.6:
+    resolution: {integrity: sha512-ei9CGV9HGTpwV6M9D+aFGRjA4xWgDmlliYMqe9rF/5FHGuJ/igxm9LRohhoOE0u79oNf9cPBCF7QnrJ+LNFLFQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       lodash: 4.17.21
       winston: 3.3.3
     dev: false
 
-  /@strapi/plugin-content-manager/4.0.4:
-    resolution: {integrity: sha512-1PgUWaJ32+Hzx2pjlRAf7+CstIzljigG7ScFAoFXpJn5+234Qw3B5yIah5xA3GA0fb+9Nyi0hWgRPzR+IRozDA==}
+  /@strapi/plugin-content-manager/4.0.6:
+    resolution: {integrity: sha512-ttG65MlAxB9sKd6arMq5H+X/bpMU3IApBDPEMF9x3/CgzTfOje2uyW6Nl1sW3h8Pe3k/JHTwZTIi4tXCK1UCOg==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@sindresorhus/slugify': 1.1.0
-      '@strapi/utils': 4.0.4
+      '@strapi/utils': 4.0.6
       lodash: 4.17.21
     dev: false
 
-  /@strapi/plugin-content-type-builder/4.0.4_debug@4.3.2+qs@6.10.1:
-    resolution: {integrity: sha512-5MPb3nOuXcELY/7570iWFjFCoVvUw/VGFBITxQesw1dlfy2JuI9XCh82arKf3h9C3nIxsRMG2cSgab6EhkhryQ==}
+  /@strapi/plugin-content-type-builder/4.0.6_debug@4.3.2+qs@6.10.1:
+    resolution: {integrity: sha512-mMdGDT3tc/MieqAY4crMt2LDRucboiwbnZ6WdFOUERlRe3yee5UXgIy41e5HftTsAf90UVQOuRK1zYFcZLtiqQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@sindresorhus/slugify': 1.1.0
-      '@strapi/generators': 4.0.4
-      '@strapi/helper-plugin': 4.0.4_debug@4.3.2+qs@6.10.1
-      '@strapi/utils': 4.0.4
+      '@strapi/generators': 4.0.6
+      '@strapi/helper-plugin': 4.0.6_debug@4.3.2+qs@6.10.1
+      '@strapi/utils': 4.0.6
       fs-extra: 9.1.0
       lodash: 4.17.21
       pluralize: 8.0.0
@@ -2228,23 +2230,26 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/plugin-email/4.0.4:
-    resolution: {integrity: sha512-BKRBaf/DC5TsxYWpVYiOZMHftFeg/rqNMJ7t9wcvHSn51BNpaPgAfiKId3fgdblmEkolwHs/PM61w9bdg0X66g==}
+  /@strapi/plugin-email/4.0.6:
+    resolution: {integrity: sha512-YyR0RN8e3Dfm1cuupjyarTgLZTbt6ygHEOOxUBF8bueNC6qq/f5SRZujGKqkU6fLS4JIAAUVJ+JiRW2UFMcGyw==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
-      '@strapi/provider-email-sendmail': 4.0.4
-      '@strapi/utils': 4.0.4
+      '@strapi/provider-email-sendmail': 4.0.6
+      '@strapi/utils': 4.0.6
       lodash: 4.17.21
     dev: false
 
-  /@strapi/plugin-graphql/4.0.4:
-    resolution: {integrity: sha512-dXcrECIw4Ii8VyDHu4mvRHRtz/dBfPmy3HeLKgmwxafse+SksdfHzvv9EArxB2RexhruNZQhSSx8rkAT3njevQ==}
+  /@strapi/plugin-graphql/4.0.6_@strapi+strapi@4.0.6:
+    resolution: {integrity: sha512-Y8SXybtz1yLOr4nOeUp2lLD7hAsaTW4K4/3e7MIlv0bAIjGdodcMVJhqlhsF4B/PTkA+rM4c2OttnOOG2miFCw==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
+    peerDependencies:
+      '@strapi/strapi': ^4.0.0
     dependencies:
       '@apollo/federation': 0.28.0_graphql@15.5.1
       '@graphql-tools/schema': 8.1.2_graphql@15.5.1
       '@graphql-tools/utils': 8.6.1_graphql@15.5.1
-      '@strapi/utils': 4.0.4
+      '@strapi/strapi': 4.0.6_sqlite3@5.0.2
+      '@strapi/utils': 4.0.6
       apollo-server-core: 3.1.2_graphql@15.5.1
       apollo-server-koa: 3.1.2_graphql@15.5.1
       glob: 7.2.0
@@ -2262,25 +2267,26 @@ packages:
       subscriptions-transport-ws: 0.9.19_graphql@15.5.1
     transitivePeerDependencies:
       - bufferutil
+      - encoding
       - koa
       - utf-8-validate
     dev: false
 
-  /@strapi/plugin-i18n/4.0.4:
-    resolution: {integrity: sha512-a4YNAy1FjZNdd26GbtDl/H4ceKRx/GbPe/ThUX3ey68RF35F+kgP3bXYKQKYxH2nzYU8p+IRwVqwU0nahLhyyw==}
+  /@strapi/plugin-i18n/4.0.6:
+    resolution: {integrity: sha512-dZjPcA7o83BjwilboLewRVatfUrhaADziGZYNq2XTgdWahtY/BcZPBRtwph2NjrHeo/XMjVVeC07PdT67Qrh0Q==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
-      '@strapi/utils': 4.0.4
+      '@strapi/utils': 4.0.6
       lodash: 4.17.21
     dev: false
 
-  /@strapi/plugin-upload/4.0.4_debug@4.3.2+qs@6.10.1:
-    resolution: {integrity: sha512-8w2ZDyLh7qwH3iet19utU8O2S3VVw9U0/ZwlxizdZ3IRblgK6blgZNXI2Mlr9LUy2+RsG2piM5UX49oy2hkkQg==}
+  /@strapi/plugin-upload/4.0.6_debug@4.3.2+qs@6.10.1:
+    resolution: {integrity: sha512-/Jc1eOjUUuZBU1m2vW81Eeh9l3icLRXsFccYmE4BkbbyRLceUk6Ct25IFtT26/D1hujIMoVD4o3Znyc4CpZMSQ==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
-      '@strapi/helper-plugin': 4.0.4_4544f61555da5a5ce9e97ec9880f6d53
-      '@strapi/provider-upload-local': 4.0.4
-      '@strapi/utils': 4.0.4
+      '@strapi/helper-plugin': 4.0.6_4544f61555da5a5ce9e97ec9880f6d53
+      '@strapi/provider-upload-local': 4.0.6
+      '@strapi/utils': 4.0.6
       byte-size: 7.0.1
       cropperjs: 1.5.11
       immer: 9.0.6
@@ -2294,7 +2300,7 @@ packages:
       react-redux: 7.2.3_react-dom@17.0.2+react@17.0.2
       react-router: 5.2.1_react@17.0.2
       react-router-dom: 5.2.0_react@17.0.2
-      sharp: 0.29.0
+      sharp: 0.29.3
     transitivePeerDependencies:
       - debug
       - qs
@@ -2307,13 +2313,13 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/plugin-users-permissions/4.0.4:
-    resolution: {integrity: sha512-2+U4iQ2GPCw2zMyrnZvy+PxqSyMvJAbSEZKyMkeFOGy+igGljKjnVCKSbEVTQfePKRqjpuLWEAbiawERcQx82w==}
+  /@strapi/plugin-users-permissions/4.0.6:
+    resolution: {integrity: sha512-/ErsmqKBXw0Yt1UDGmJb7EYvNoj3hfAyQD5BMXBwdK7xqRV6Eb91JYfDwCwfdX2D/sJFybNtzZIJmIDF4hw4dA==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@purest/providers': 1.0.4
-      '@strapi/helper-plugin': 4.0.4
-      '@strapi/utils': 4.0.4
+      '@strapi/helper-plugin': 4.0.6
+      '@strapi/utils': 4.0.6
       bcryptjs: 2.4.3
       grant-koa: 5.4.8
       jsonwebtoken: 8.5.1
@@ -2350,39 +2356,39 @@ packages:
       - webpack
     dev: false
 
-  /@strapi/provider-email-sendmail/4.0.4:
-    resolution: {integrity: sha512-1ptlt/QpZ0nKKeWKU3ta5fAj+4YXa555GOAyMAUv3bWQH3BDsBAYH466F/sjZA97+YPUpjbyiA6cmneZJMdbfg==}
+  /@strapi/provider-email-sendmail/4.0.6:
+    resolution: {integrity: sha512-wSzo/QuJLwp2TsWeRN1KzS0mA0HsZ1k4nSjN6xrHtRzZIQqfLD9CuL36Y2fBaCixDG/UtYVdzY41GQSmJPB2yw==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
-      '@strapi/utils': 4.0.4
+      '@strapi/utils': 4.0.6
       sendmail: 1.6.1
     dev: false
 
-  /@strapi/provider-upload-local/4.0.4:
-    resolution: {integrity: sha512-BPD2jzPUY6UqbQejoxuGrUVvNK9fCK6OqqcsRONLxEh1HQ2TcOLK4K3pikIvAUy/xNDfJuN21tt6cTRGXmPAuw==}
+  /@strapi/provider-upload-local/4.0.6:
+    resolution: {integrity: sha512-AMM/unATDmmsf3PT6NySlHGZPeF55tKhLyLGvQW4yXk0yvW8Zok07GzTqsccRC7oVCDjcxB+FJjlwNNojtMNhA==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
-      '@strapi/utils': 4.0.4
+      '@strapi/utils': 4.0.6
     dev: false
 
-  /@strapi/strapi/4.0.4_sqlite3@5.0.2:
-    resolution: {integrity: sha512-gLA+livE6JK32HQT3t1ik7qMSQyqnGat9n5YufeqASwb3MXpCa8RXla8oGrvphUv2XaCGa33uUYU3FP4DKfDMw==}
+  /@strapi/strapi/4.0.6_sqlite3@5.0.2:
+    resolution: {integrity: sha512-nrPi2LOyQcVIvJBGPPIrjBm6XnxFs/ZZlLXyE5P3BKzltWh9damtVOdpIeNMFqgLxTiZ5lGs83RW0eXLcnK7iA==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
       '@koa/cors': 3.1.0
       '@koa/router': 10.1.1
-      '@strapi/admin': 4.0.4_debug@4.3.2
-      '@strapi/database': 4.0.4_sqlite3@5.0.2
-      '@strapi/generate-new': 4.0.4
-      '@strapi/generators': 4.0.4
-      '@strapi/logger': 4.0.4
-      '@strapi/plugin-content-manager': 4.0.4
-      '@strapi/plugin-content-type-builder': 4.0.4_debug@4.3.2+qs@6.10.1
-      '@strapi/plugin-email': 4.0.4
-      '@strapi/plugin-upload': 4.0.4_debug@4.3.2+qs@6.10.1
-      '@strapi/utils': 4.0.4
+      '@strapi/admin': 4.0.6_debug@4.3.2
+      '@strapi/database': 4.0.6_sqlite3@5.0.2
+      '@strapi/generate-new': 4.0.6
+      '@strapi/generators': 4.0.6
+      '@strapi/logger': 4.0.6
+      '@strapi/plugin-content-manager': 4.0.6
+      '@strapi/plugin-content-type-builder': 4.0.6_debug@4.3.2+qs@6.10.1
+      '@strapi/plugin-email': 4.0.6
+      '@strapi/plugin-upload': 4.0.6_debug@4.3.2+qs@6.10.1
+      '@strapi/utils': 4.0.6
       bcryptjs: 2.4.3
       boxen: 5.1.2
       chalk: 4.1.2
@@ -2410,7 +2416,7 @@ packages:
       koa-session: 6.2.0
       koa-static: 5.0.0
       lodash: 4.17.21
-      node-fetch: 2.6.5
+      node-fetch: 2.6.7
       node-machine-id: 1.1.12
       node-schedule: 2.0.0
       open: 8.2.1
@@ -2420,6 +2426,7 @@ packages:
       resolve-cwd: 3.0.0
       semver: 7.3.5
       statuses: 2.0.1
+      uuid: 3.4.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@types/hoist-non-react-statics'
@@ -2429,6 +2436,7 @@ packages:
       - '@webpack-cli/migrate'
       - acorn
       - bufferutil
+      - encoding
       - esbuild
       - immer
       - mysql
@@ -2448,8 +2456,8 @@ packages:
       - webpack-bundle-analyzer
     dev: false
 
-  /@strapi/utils/4.0.4:
-    resolution: {integrity: sha512-BZoOv1RexOOgsUoDVrGVM88AKuJvHItl9HguR3MDS2Rpsiiw0dCIggb2xSnXzg6qLnPYpDGi8SWh5QeSet0SSA==}
+  /@strapi/utils/4.0.6:
+    resolution: {integrity: sha512-8DlZ7tAm9LC5nFi5mAajhLh8OCodE2nKXkIMgom6Nr4GC423anVoOEmYpv+cUkdfO8hohrnnIG+RzJMgDBfGCg==}
     engines: {node: '>=12.22.0 <=16.x.x', npm: '>=6.0.0'}
     dependencies:
       '@sindresorhus/slugify': 1.1.0
@@ -2778,6 +2786,30 @@ packages:
       '@types/node': 17.0.8
     dev: false
 
+  /@ucast/core/1.10.1:
+    resolution: {integrity: sha512-sXKbvQiagjFh2JCpaHUa64P4UdJbOxYeC5xiZFn8y6iYdb0WkismduE+RmiJrIjw/eLDYmIEXiQeIYYowmkcAw==}
+    dev: false
+
+  /@ucast/js/3.0.2:
+    resolution: {integrity: sha512-zxNkdIPVvqJjHI7D/iK8Aai1+59yqU+N7bpHFodVmiTN7ukeNiGGpNmmSjQgsUw7eNcEBnPrZHNzp5UBxwmaPw==}
+    dependencies:
+      '@ucast/core': 1.10.1
+    dev: false
+
+  /@ucast/mongo/2.4.2:
+    resolution: {integrity: sha512-/zH1TdBJlYGKKD+Wh0oyD+aBvDSWrwHcD8b4tUL9UgHLhzHtkEnMVFuxbw3SRIRsAa01wmy06+LWt+WoZdj1Bw==}
+    dependencies:
+      '@ucast/core': 1.10.1
+    dev: false
+
+  /@ucast/mongo2js/1.3.3:
+    resolution: {integrity: sha512-sBPtMUYg+hRnYeVYKL+ATm8FaRPdlU9PijMhGYKgsPGjV9J4Ks41ytIjGayvKUnBOEhiCaKUUnY4qPeifdqATw==}
+    dependencies:
+      '@ucast/core': 1.10.1
+      '@ucast/js': 3.0.2
+      '@ucast/mongo': 2.4.2
+    dev: false
+
   /@webassemblyjs/ast/1.11.1:
     resolution: {integrity: sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw==}
     dependencies:
@@ -3091,6 +3123,8 @@ packages:
     dependencies:
       apollo-server-caching: 3.3.0
       apollo-server-env: 4.2.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /apollo-graphql/0.9.5_graphql@15.5.1:
@@ -3146,13 +3180,17 @@ packages:
       lru-cache: 6.0.0
       sha.js: 2.4.11
       uuid: 8.3.2
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /apollo-server-env/4.2.0:
     resolution: {integrity: sha512-4xJ+PCoWsFLj4rU6iXrIhqD7nI42goi4Iqrhsof9680ljSzkzd+PCwZsja3mHOFXKUQQUvJ7StVSgwaiRu45+A==}
     engines: {node: '>=12.0'}
     dependencies:
-      node-fetch: 2.6.5
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /apollo-server-errors/3.3.0_graphql@15.5.1:
@@ -3183,6 +3221,8 @@ packages:
       graphql: 15.5.1
       koa-bodyparser: 4.3.0
       koa-compose: 4.1.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /apollo-server-plugin-base/3.5.0_graphql@15.5.1:
@@ -3193,6 +3233,8 @@ packages:
     dependencies:
       apollo-server-types: 3.5.0_graphql@15.5.1
       graphql: 15.5.1
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /apollo-server-types/3.5.0_graphql@15.5.1:
@@ -3205,6 +3247,8 @@ packages:
       apollo-server-caching: 3.3.0
       apollo-server-env: 4.2.0
       graphql: 15.5.1
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /aproba/1.2.0:
@@ -3348,16 +3392,24 @@ packages:
     resolution: {integrity: sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==}
     dev: false
 
-  /axios/0.24.0:
+  /axios/0.24.0_debug@4.3.2:
     resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
     dependencies:
-      follow-redirects: 1.14.7
+      follow-redirects: 1.14.7_debug@4.3.2
     transitivePeerDependencies:
       - debug
     dev: false
 
-  /axios/0.24.0_debug@4.3.2:
-    resolution: {integrity: sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==}
+  /axios/0.25.0:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
+    dependencies:
+      follow-redirects: 1.14.7_debug@4.3.2
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
+  /axios/0.25.0_debug@4.3.2:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
     dependencies:
       follow-redirects: 1.14.7_debug@4.3.2
     transitivePeerDependencies:
@@ -4563,13 +4615,6 @@ packages:
     engines: {node: '>=0.10'}
     dev: false
 
-  /decompress-response/4.2.1:
-    resolution: {integrity: sha512-jOSne2qbyE+/r8G1VU+G/82LBs2Fs4LAsTiLSHOCOMZQl2OKZ6i8i4IyHemTe+/yIXOtTcRQMzPcgyhoFlqPkw==}
-    engines: {node: '>=8'}
-    dependencies:
-      mimic-response: 2.1.0
-    dev: false
-
   /decompress-response/6.0.0:
     resolution: {integrity: sha512-aW35yZM6Bb/4oJlZncMH2LCoZtJXTRxES17vE3hoRiowU2kWHaJKFkSBDnDR+cm9J+9QhXmREyIfv0pji9ejCQ==}
     engines: {node: '>=10'}
@@ -4736,6 +4781,11 @@ packages:
     resolution: {integrity: sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=}
     engines: {node: '>=0.10'}
     hasBin: true
+    dev: false
+
+  /detect-libc/2.0.0:
+    resolution: {integrity: sha512-S55LzUl8HUav8l9E2PBTlC5PAJrHK7tkM+XXFGD+fbsbkTzhCpG6K05LxJcUOEWzMa4v6ptcMZ9s3fOdJDu0Zw==}
+    engines: {node: '>=8'}
     dev: false
 
   /detect-node/2.1.0:
@@ -5343,16 +5393,6 @@ packages:
 
   /fn.name/1.1.0:
     resolution: {integrity: sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==}
-    dev: false
-
-  /follow-redirects/1.14.7:
-    resolution: {integrity: sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
     dev: false
 
   /follow-redirects/1.14.7_debug@4.3.2:
@@ -7524,11 +7564,6 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
-  /mimic-response/2.1.0:
-    resolution: {integrity: sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==}
-    engines: {node: '>=8'}
-    dev: false
-
   /mimic-response/3.1.0:
     resolution: {integrity: sha512-z0yWI+4FDrrweS8Zmt4Ej5HdJmky15+L2e6Wgn3+iK5fWzb6T3fhNFq2+MeTRb064c6Wr4N/wv0DzQTjNzHNGQ==}
     engines: {node: '>=10'}
@@ -7849,10 +7884,11 @@ packages:
       tslib: 2.3.1
     dev: false
 
-  /node-abi/2.30.1:
-    resolution: {integrity: sha512-/2D0wOQPgaUWzVSVgRMx+trKJRC2UG4SUc4oCJoXx9Uxjtp0Vy3/kt7zcbxHF8+Z/pK3UloLWzBISg72brfy1w==}
+  /node-abi/3.7.0:
+    resolution: {integrity: sha512-3J+U4CvxVNEk9+lGdJkmYbN8cIN0HMTDT9R0ezX7pmp7aD6BaKsfAHwVn3IvVg6pYIRUuQ+gHW1eawrvywnSQQ==}
+    engines: {node: '>=10'}
     dependencies:
-      semver: 5.7.1
+      semver: 7.3.5
     dev: false
 
   /node-addon-api/3.2.1:
@@ -7863,9 +7899,14 @@ packages:
     resolution: {integrity: sha512-eazsqzwG2lskuzBqCGPi7Ac2UgOoMz8JVOXVhTvvPDYhthvNpefx8jWD8Np7Gv+2Sz0FlPWZk0nJV0z598Wn8Q==}
     dev: false
 
-  /node-fetch/2.6.5:
-    resolution: {integrity: sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==}
+  /node-fetch/2.6.7:
+    resolution: {integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==}
     engines: {node: 4.x || >=6.0.0}
+    peerDependencies:
+      encoding: ^0.1.0
+    peerDependenciesMeta:
+      encoding:
+        optional: true
     dependencies:
       whatwg-url: 5.0.0
     dev: false
@@ -8623,22 +8664,22 @@ packages:
       source-map-js: 1.0.1
     dev: false
 
-  /prebuild-install/6.1.4:
-    resolution: {integrity: sha512-Z4vpywnK1lBg+zdPCVCsKq0xO66eEV9rWo2zrROGGiRS4JtueBOdlB1FnY8lcy7JsUud/Q3ijUxyWN26Ika0vQ==}
-    engines: {node: '>=6'}
+  /prebuild-install/7.0.1:
+    resolution: {integrity: sha512-QBSab31WqkyxpnMWQxubYAHR5S9B2+r81ucocew34Fkl98FhvKIF50jIJnNOBmAZfyNV7vE5T6gd3hTVWgY6tg==}
+    engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      detect-libc: 1.0.3
+      detect-libc: 2.0.0
       expand-template: 2.0.3
       github-from-package: 0.0.0
       minimist: 1.2.5
       mkdirp-classic: 0.5.3
       napi-build-utils: 1.0.2
-      node-abi: 2.30.1
+      node-abi: 3.7.0
       npmlog: 4.1.2
       pump: 3.0.0
       rc: 1.2.8
-      simple-get: 3.1.0
+      simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
     dev: false
@@ -9654,6 +9695,7 @@ packages:
   /sequelize/5.22.5:
     resolution: {integrity: sha512-ySIHof18sJbeVG4zjEvsDL490cd9S14/IhkCrZR/g0C/FPlZq1AzEJVeSAo++9/sgJH2eERltAIGqYQNgVqX/A==}
     engines: {node: '>=6.0.0'}
+    deprecated: 'Please update to v6 or higher! A migration guide can be found here: https://sequelize.org/v6/manual/upgrade-to-v6.html'
     dependencies:
       bluebird: 3.7.2
       cls-bluebird: 2.1.0
@@ -9748,17 +9790,17 @@ packages:
     resolution: {integrity: sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==}
     dev: false
 
-  /sharp/0.29.0:
-    resolution: {integrity: sha512-mdN1Up0eN+SwyForPls59dWO0nx64J1XRQYy5ZiKSADAccGYCB10UAGJHSVG9VObzJdhHqrVJzQcq6gx8USyoA==}
+  /sharp/0.29.3:
+    resolution: {integrity: sha512-fKWUuOw77E4nhpyzCCJR1ayrttHoFHBT2U/kR/qEMRhvPEcluG4BKj324+SCO1e84+knXHwhJ1HHJGnUt4ElGA==}
     engines: {node: '>=12.13.0'}
     requiresBuild: true
     dependencies:
       color: 4.2.0
       detect-libc: 1.0.3
       node-addon-api: 4.2.0
-      prebuild-install: 6.1.4
+      prebuild-install: 7.0.1
       semver: 7.3.5
-      simple-get: 3.1.0
+      simple-get: 4.0.1
       tar-fs: 2.1.1
       tunnel-agent: 0.6.0
     dev: false
@@ -9815,10 +9857,10 @@ packages:
     resolution: {integrity: sha512-cSFtAPtRhljv69IK0hTVZQ+OfE9nePi/rtJmw5UjHeVyVroEqJXP1sFztKUy1qU+xvz3u/sfYJLa947b7nAN2Q==}
     dev: false
 
-  /simple-get/3.1.0:
-    resolution: {integrity: sha512-bCR6cP+aTdScaQCnQKbPKtJOKDp/hj9EDLJo3Nw4y1QksqaovlW/bnptB6/c1e+qmNIDHRK+oXFDdEqBT8WzUA==}
+  /simple-get/4.0.1:
+    resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
     dependencies:
-      decompress-response: 4.2.1
+      decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
     dev: false
